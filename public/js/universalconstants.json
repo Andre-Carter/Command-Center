@@ -1,0 +1,12 @@
+[
+    {
+        "name": "speed of light",
+        "symbol": "c",
+        "value": "299792458.0", 
+        "unit": "m/s", 
+        "si_base_units": "m s^-1",
+        "accuracy": "Exact",
+        "uncertainty": "None",
+        "description": "The speed of light in a vaccum."
+    }
+]

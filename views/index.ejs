@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Command Center</title>
+<!--<link rel="icon" type="image/x-icon" href="assets/">-->
+    <meta name="description" content="Command Center">
+    <meta name="keywords" content="Command Center">
+    <meta name="author" content="Andre Carter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="module" src="../js/index.js" defer></script>
+
+    <link src="php.php">
+</head>
+
+<body>
+    <h1>Command Center</h1>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+    <!--/settings (theme, account, )-->
+    <!-- digital clock -->
+    <div id="digital-clock">
+        <div id="time">
+            <span id="hours">00</span>
+            <span class="time-seperator">:</span>
+            <span id="minutes">00</span>
+            <span class="time-seperator">:</span>
+            <span id="seconds">00</span>
+        </div>
+        <div id="date">
+            <span id="weekday">Weekday</span>
+            <span id="month">Month</span>
+            <span id="today">00</span>
+            <span id="year">0000</span>
+        </div>
+    </div>
+    <!-- marquee -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <ul class="marquee-list marquee-content">
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+                <li>Welcome</li>
+            </ul>
+        </div>
+    </div>
+<!--RSVP DISPLAY-->
+<div id="rsvp-container">
+    <h2 id="rsvpDisplay"></h2> 
+<!--RSVP SETTINGS MODAL-->
+<button type="button" id="rsvpSettingsButton">Settings</button>
+<dialog id="rsvpSettingsModal">
+    <form id="rsvpSettingForm" method="dialog">
+        <h1>RSVP Settings</h1>
+        <button type="button" id="exitModal">x</button>
+            
+            <p>Delay after periods:</p>
+            <p>Delay after commas:</p>
+
+        <button type="submit">Save</button>
+    </form>
+</dialog>
+
+<form id="rsvpForm">
+        <label for="rsvpTextArea" id="textarea-label">Type here: </label>
+        <textarea id="rsvpTextArea" rows="4" cols="50">Rapid serial visual presentation (RSVP) is a computer app or reading method that displays words one at a time in sequence to help people read faster and bypass natural eye movements. The theory is that reading is inefficient because people's eyes move around the page, reread lines, and focus on one word at a time. By eliminating these movements, RSVP apps can help people read at faster speeds, sometimes over 400 words per minute (WPM). However, some research suggests that natural eye movements are necessary for accurate comprehension. For example, one study found that RSVP reading impaired literal comprehension of text, but participants did better when making inferences about the content. Another reviewer found that RSVP apps work best with certain settings and types of texts, and that reading dense academic texts with RSVP can be counterproductive.</textarea>
+        
+    <div id="rsvpControlPanelBox">
+        <label for="wpm">WPM</label>
+        <input type="number" id="wpm" min="100" max="1000" maxlength="4" value="300" onchange="wpmCalculator()">
+        <!--edit panel-->
+        <button type="reset" id="clear">clear</button>
+        <button type="button" id="cut">x</button>
+        <button type="button" id="copy">c</button>
+        <button type="button" id="paste">v</button>
+        <input type="file">
+        <button type="submit" id="save">save</button>  
+        <!--control panel-->
+        <button type="button" id="beginning">⏮</button>
+        <button type="button" id="back">←</button>
+        <button type="button" id="play">▶</button>
+        <button type="button" id="pause">⏸</button>
+        <button type="button" id="forward">→</button>
+        <button type="button" id="end">⏭</button>
+    </div>
+</form>
+<!--stats panel-->
+    <div id="stats-box">
+        <div id="word-count-box">
+            <span id="wordCount">0</span>
+            <span>Words</span>
+        </div>
+        <div id="character-count-box">
+            <span id="characters">0</span>
+            <span>/</span>
+            <span id="maxCharacters">0</span>
+            <span>Chars</span>
+        </div>
+    </div>
+</div>
+
+    <a href="html/calculator.html" target="calculator">Calculator</a>
+    <a href="html/references.html">References</a>
+    <a href="html/bookmark.html">Bookmarks</a>
+
+    <div id="universalconstants">
+
+    </div>
+</body>
+</html>
